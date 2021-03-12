@@ -1,0 +1,77 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="RSVP.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>RSVP</title>
+    <link rel="stylesheet" type="text/css" href="Styles.css" />
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style3 {
+            height: 150px;
+            width: 1063px;
+        }
+    </style>
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            
+            <table class="auto-style1">
+ <tr>
+ <td colspan="2" style="height:50px">&nbsp;
+ <h2>RSVP</h2>
+ </td>
+ </tr>
+ <tr>
+ <td class="auto-style3">&nbsp;
+ Меню
+     <div class="menu">
+         <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" ForeColor="Red" Orientation="Vertical">
+         </asp:Menu>
+         <div class="menu">
+             <asp:Menu ID="NavigationMenu0" runat="server" CssClass="menu" EnableViewState="false" ForeColor="Red" Orientation="Vertical">
+                 <Items>
+                     <asp:MenuItem NavigateUrl="~/Start.aspx" Text="Главная" />
+                     <asp:MenuItem NavigateUrl="~/Reg.aspx" Text="Регистрация" />
+                     <asp:MenuItem NavigateUrl="~/Summary.aspx" Text="Отчет о регистрации" />
+                     <asp:MenuItem NavigateUrl="~/About.aspx" Text="Подробности"/>
+                 </Items>
+             </asp:Menu>
+         </div>
+     </div>
+ </td>
+ <td style="height: 150px">
+     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+     </asp:ContentPlaceHolder>
+     </td>
+ </tr>
+ <tr>
+ <td colspan="2" style="height:50px">&nbsp;
+ Нижний колонтитул
+     &nbsp;
+ <%--Нижний колонтитул--%>
+     <div id="temo_footer">
+         <ul class="footer_menu">
+             <li><a href="Start.aspx">Главная</a></li>
+             <li><a href="Reg.aspx">Регистрация</a></li>
+             <li><a href="Summary.aspx">Отчет о регистрации</a></li>
+             <li><a href="About.aspx">Подробности</a></li>
+         </ul>
+         <div class="footer">
+ <asp:Literal ID="VisitorLiteral" runat="server" />
+ </div>
+     </div>
+ </td>
+ </tr>
+ </table>
+            
+        </div>
+    </form>
+</body>
+</html>
